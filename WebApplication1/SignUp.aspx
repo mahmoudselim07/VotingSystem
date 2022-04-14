@@ -425,7 +425,7 @@
                             </tr>
                             <tr>
                                 <td class="auto-style6" colspan="2">
-                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign Up" Width="119px" Height="42px" />
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign Up" Width="119px" Height="42px" PostBackUrl="~/Home.aspx" />
                                 </td>
                             </tr>
                             <tr>

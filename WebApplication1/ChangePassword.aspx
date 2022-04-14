@@ -157,13 +157,13 @@
             position: relative;
             font-family: "Avenir Next", sans-serif;
             font-weight: 900;
-            font-size: 16px;
+            font-size: 14px;
             text-transform: uppercase;
             font-style: italic;
             letter-spacing: 0.05em;
             display: inline-block;
           
-            margin-top:50px;
+            margin-top:0px;
         }
 
         .auto-style15 {
