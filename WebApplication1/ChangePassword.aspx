@@ -238,7 +238,7 @@
             left: 0px;
             top: 20px;
             width: 477px;
-            height: 86px;
+            height: 80px;
         }
 
                
@@ -254,6 +254,26 @@
         }
 
                
+        .auto-style23 {
+            width: 642px;
+            margin-left: 40px;
+        }
+        #Password3 {
+             width: 10cm;
+            padding: 6px 15px 7px 0px;
+            margin-left:40px;
+            margin-bottom:20px;
+            border-left-color :rgb(186, 186, 186);
+            border-right-color :rgb(186, 186, 186);
+            border-top-color:rgb(186, 186, 186);
+            border-bottom-color:rgb(186, 186, 186);
+            border-style:ridge;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 10px 10px 10px 10px;
+        }
+        
+               
         </style>
     </head>
 <body style="height: 391px; width: 1089px;">
@@ -267,9 +287,13 @@
                     <td class="auto-style2">
                         <table class="auto-style4">
                             <tr>
-                                <td class="auto-style20">
+                                <td class="auto-style23">
                                     <asp:Label ID="Label1" runat="server" Text="Change password" CssClass="auto-style19"></asp:Label>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style20">
+                                    <input placeholder=" Old Password" id="Password3" type="password" class="auto-style21" /></td>
                             </tr>
                             <tr>
                                 <td class="auto-style8">
