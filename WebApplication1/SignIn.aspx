@@ -7,30 +7,33 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 100%;
-            height: 387px;
+            width: 130%;
+            height: 441px;
         }
         .auto-style2 {
             height: 198px;
+            width: 739px;
         }
         .auto-style3 {
-            width: 321px;
+            width: 6px;
             background-color:black;
         }
         .auto-style4 {
-            width: 99%;
+            width: 94%;
             height: 259px;
             margin-top: 0px;
         }
         .auto-style6 {
             height: 32px;
-            
+            width: 224px;
         }
         .auto-style7 {
-            height: 74px;
+            height: 99px;
+            width: 224px;
         }
         .auto-style8 {
             height: 50px;
+            width: 224px;
         }
         #Button1 {
            
@@ -166,8 +169,9 @@
 
         .auto-style15 {
             left: 0px;
-            top: 50px;
-            width: 316px;
+            top: 18px;
+            width: 281px;
+            height: 126px;
         }
        
        
@@ -227,21 +231,55 @@
 
         .auto-style16 {
             height: 64px;
+            width: 739px;
         }
 
                
 
         .auto-style17 {
             height: 23px;
+            width: 224px;
         }
         .auto-style18 {
             width: 246px;
         }
 
                
+        .auto-style19 {
+            width: 285px;
+        }
+        .auto-style20 {
+            height: 50px;
+            width: 285px;
+        }
+        .auto-style21 {
+            height: 99px;
+            width: 285px;
+        }
+        .auto-style22 {
+            height: 23px;
+            width: 285px;
+        }
+        .auto-style23 {
+            height: 32px;
+            width: 285px;
+        }
+        .auto-style24 {
+            width: 224px;
+        }
+        .auto-style25 {
+            height: 34px;
+            width: 224px;
+        }
+        .auto-style26 {
+            height: 34px;
+            width: 285px;
+        }
+
+               
         </style>
     </head>
-<body style="height: 391px; width: 874px;">
+<body style="height: 466px; width: 838px;">
     
         <form id="form1" runat="server">
             <table class="auto-style1">
@@ -252,22 +290,35 @@
                     <td class="auto-style2">
                         <table class="auto-style4">
                             <tr>
-                                <td>
+                                <td class="auto-style24">
                                     <asp:Label ID="Label1" runat="server" Text="Log In" CssClass="auto-style10"></asp:Label>
                                 </td>
+                                <td class="auto-style19">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style8">
-                                    <input placeholder=" E-Mail" id="Text1" type="text" class="auto-style11" /></td>
+                                    <asp:TextBox ID="Text1" placeholder=" E-Mail" class="auto-style11" runat="server"></asp:TextBox>
+                                </td>
+                                <td class="auto-style20">
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup='valGroup1' ControlToValidate="Text1" ErrorMessage="Write your valid email&lt;br&gt;"  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Text1" ValidationGroup='valGroup1' ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="auto-style7">
-                                    <input placeholder=" Password" id="Password1" type="password" /></td>
+                                    <asp:TextBox  placeholder=" Password" id="Password1" type="password" runat="server" ></asp:TextBox></td>
+                                <td class="auto-style21">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ValidationGroup='valGroup1' ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Password1" ValidationGroup='valGroup1' ErrorMessage="Must be morethan 8 characters with numbers and lower case and upper case and special character" ValidationExpression="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%?=*&]).{8,20})" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    </td>
                             </tr>
                             <tr>
-                                <td class="auto-style17">
+                                <td class="auto-style25">
                                     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ChangePassword.aspx">Forgot your password ?</asp:LinkButton>
                                 </td>
+                                <td class="auto-style26">
+                                    </td>
                             </tr>
                             <tr>
                                 <td class="auto-style17">
@@ -277,21 +328,29 @@
                                         <option value="2">Candidates</option>
                                         <option value="3">Voter</option>
                                     </select></td>
+                                <td class="auto-style22">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style6">
-                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log In" Width="92px" PostBackUrl="~/Home.aspx" />
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log In" ValidationGroup='valGroup1' Width="92px" PostBackUrl="~/Home.aspx" />
                                 </td>
+                                <td class="auto-style23">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style6">
                                     <asp:Label ID="Label4" runat="server" Text="____________________________________________________" CssClass="auto-style10"></asp:Label>
                                 </td>
+                                <td class="auto-style23">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style6">
                                     <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/SignUp.aspx">Don&#39;t have an account?</asp:LinkButton>
                                 </td>
+                                <td class="auto-style23">
+                                    &nbsp;</td>
                             </tr>
                         </table>
                     </td>

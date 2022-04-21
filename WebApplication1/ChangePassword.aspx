@@ -7,29 +7,29 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 81%;
+            width: 100%;
             height: 387px;
         }
         .auto-style2 {
             height: 198px;
-            width: 812px;
+            width: 852px;
         }
         .auto-style3 {
             width: 321px;
             background-color:black;
         }
         .auto-style4 {
-            width: 85%;
+            width: 100%;
             height: 259px;
             margin-top: 0px;
         }
         .auto-style7 {
             height: 51px;
-            width: 642px;
+            width: 643px;
         }
         .auto-style8 {
             height: 33px;
-            width: 642px;
+            width: 643px;
         }
         #Button1 {
            
@@ -229,7 +229,7 @@
 
         .auto-style16 {
             height: 64px;
-            width: 812px;
+            width: 852px;
         }
 
                
@@ -243,7 +243,7 @@
 
                
         .auto-style20 {
-            width: 642px;
+            width: 643px;
         }
         .auto-style21 {
             height: 28px;
@@ -255,7 +255,7 @@
 
                
         .auto-style23 {
-            width: 642px;
+            width: 643px;
             margin-left: 40px;
         }
         #Password3 {
@@ -274,9 +274,26 @@
         }
         
                
+        .auto-style24 {
+            width: 477px;
+            margin-left: 40px;
+        }
+        .auto-style25 {
+            width: 477px;
+        }
+        .auto-style26 {
+            height: 33px;
+            width: 477px;
+        }
+        .auto-style27 {
+            height: 51px;
+            width: 477px;
+        }
+        
+               
         </style>
     </head>
-<body style="height: 391px; width: 1089px;">
+<body style="height: 431px; width: 1089px;">
     
         <form id="form1" runat="server">
             <table class="auto-style1">
@@ -287,26 +304,40 @@
                     <td class="auto-style2">
                         <table class="auto-style4">
                             <tr>
-                                <td class="auto-style23">
+                                <td class="auto-style24">
                                     <asp:Label ID="Label1" runat="server" Text="Change password" CssClass="auto-style19"></asp:Label>
                                 </td>
+                                <td class="auto-style23">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
+                                <td class="auto-style25">
+                                    <asp:TextBox placeholder=" Old Password" id="Password3" type="password" class="auto-style21" runat="server" ></asp:TextBox></td>
                                 <td class="auto-style20">
-                                    <input placeholder=" Old Password" id="Password3" type="password" class="auto-style21" /></td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password3" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </td>
                             </tr>
                             <tr>
+                                <td class="auto-style26">
+                                   <asp:TextBox placeholder=" New Password" id="Password1" type="password" class="auto-style21"  runat="server" ></asp:TextBox></td>
                                 <td class="auto-style8">
-                                    <input placeholder=" New Password" id="Password1" type="password" class="auto-style21" /></td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Password1" ErrorMessage="Must be morethan 8 characters with numbers and lower case and upper case and special character" ValidationExpression="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%?=*&]).{8,20})" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    </td>
                             </tr>
                             <tr>
+                                <td class="auto-style27">
+                                     <asp:TextBox placeholder=" Confirm New Password" id="Password2" type="password" class="auto-style22"  runat="server" ></asp:TextBox></td>
                                 <td class="auto-style7">
-                                    <input placeholder=" Confirm New Password" id="Password2" type="password" class="auto-style22" /></td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password2" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </td>
                             </tr>
                             <tr>
-                                <td class="auto-style20">
+                                <td class="auto-style25">
                                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Confirm" Width="125px" />
                                 </td>
+                                <td class="auto-style20">
+                                    &nbsp;</td>
                             </tr>
                             </table>
                     </td>

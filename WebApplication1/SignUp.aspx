@@ -14,11 +14,11 @@
             height: 198px;
         }
         .auto-style3 {
-            width: 321px;
+            width: 283px;
             background-color:black;
         }
         .auto-style4 {
-            width: 99%;
+            width: 101%;
             height: 709px;
             margin-top: 0px;
         }
@@ -232,12 +232,15 @@
 
         .auto-style19 {
             height: 40px;
+            width: 344px;
         }
         .auto-style20 {
             height: 49px;
+            width: 344px;
         }
         .auto-style21 {
             height: 33px;
+            width: 344px;
         }
         #Text2 {
             width: 10cm;
@@ -325,18 +328,15 @@
 
         .auto-style22 {
             height: 61px;
+            width: 344px;
         }
-        .auto-style23 {
-            height: 48px;
-        }
-        
+                
         #Label6{
              margin-right:10px;
              color: black;
             text-align: center;
             display: flex;
-            justify-content: center;
-            align-items: center;
+           margin-left:50px;
             position: relative;
             font-family: "Avenir Next", sans-serif;
             font-weight: 900;
@@ -348,17 +348,64 @@
             color: black;
             text-align: center;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-left:50px;
             position: relative;
             font-family: "Avenir Next", sans-serif;
             font-weight: 900;
             font-size: 12px;
         }
 
+        .auto-style25 {
+            width: 7.6cm;
+            height: 18px;
+            margin-right:30px;
+            justify-content:center;
+            align-items: center;
+        }
+        .auto-style26 {
+            height: 10px;
+        }
+        .auto-style27 {
+            height: 14px;
+        }
+        .auto-style28 {
+            height: 33px;
+            width: 151px;
+        }
+        .auto-style29 {
+            height: 49px;
+            width: 151px;
+        }
+        .auto-style30 {
+            height: 40px;
+            width: 151px;
+        }
+        .auto-style31 {
+            height: 61px;
+            width: 151px;
+        }
+        .auto-style32 {
+            width: 344px;
+        }
+        .auto-style33 {
+            width: 151px;
+        }
+        .auto-style34 {
+            height: 10px;
+            width: 344px;
+        }
+        .auto-style35 {
+            margin-left: 0px;
+        }
+
+        .auto-style36 {
+            height: 14px;
+            width: 83px;
+        }
+
         </style>
     </head>
-<body style="height: 421px; width: 874px;">
+<body style="height: 781px; width: 1273px;">
     
         <form id="form1" runat="server">
             <table class="auto-style1">
@@ -369,51 +416,72 @@
                     <td class="auto-style2">
                         <table class="auto-style4">
                             <tr>
-                                <td colspan="2">
+                                <td colspan="3">
                                     <asp:Label ID="Label1" runat="server" Text="Sign Up" CssClass="auto-style10"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style21" colspan="2">
-                                    <input placeholder=" First Name" id="Text1" type="text" class="auto-style11" /></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style20" colspan="2">
-                                    <input placeholder=" Second Name" id="Text2" type="text" class="auto-style11" /></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style19" colspan="2">
-                                    <input placeholder=" E-Mail" id="Text3" type="text" class="auto-style11" /></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style19" colspan="2">
-                                     <input placeholder=" Password" id="Password1" type="password" /></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style22" colspan="2">
-                                     <input placeholder=" Confirm Password" id="Password2" type="password" /></td>
-                            </tr>
-                            <tr>
-                                <td class="auto-style23">
-                                     <asp:Label ID="Label7" runat="server" Text="Birth Date :"></asp:Label>
+                                <td class="auto-style21">
+                                    <asp:TextBox placeholder=" First Name" id="Text1" type="text" class="auto-style11" runat="server"></asp:TextBox>
                                 </td>
-                                <td class="auto-style23">
-                                    <input placeholder=" Bithday" id="BDate" type="date" /></td>
+                                <td class="auto-style28" colspan="2">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="Text1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style20">
+                                    <asp:TextBox placeholder=" Second Name" id="Text2" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
+                                <td class="auto-style29" colspan="2">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="Text2" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style19">
+                                    <asp:TextBox placeholder=" E-Mail" id="Text3" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
+                                <td class="auto-style30" colspan="2">
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup='valGroup1' ControlToValidate="Text3" ErrorMessage="Write your valid email&lt;br&gt;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Text3" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style32">
+                                     <asp:TextBox placeholder=" Password" id="Password1" type="password" runat="server"></asp:TextBox></td>
+                                <td class="auto-style33" colspan="2">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup='valGroup1' ControlToValidate="Password1" ErrorMessage="Must be morethan 8 characters with numbers and lower case and upper case and special character" ValidationExpression="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%?=*&]).{8,20})" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style22">
+                                      <asp:TextBox placeholder=" Confirm Password" id="Password2" type="password" runat="server"></asp:TextBox></td>
+                                <td class="auto-style31" colspan="2">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup='valGroup1' runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="auto-style34">
+                                     <asp:Label ID="Label7" runat="server" Text="Birth Date : &lt;br&gt;"></asp:Label>
+                                </td>
+                                <td class="auto-style26" colspan="2">
+                                    <input placeholder=" Bithday" id="BDate" type="date" class="auto-style25" /></td>
                                      &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>
-                                     <asp:Label ID="Label6" runat="server" Text="Gender :"></asp:Label>
+                                <td class="auto-style27">
+                                     <asp:Label ID="Label6" runat="server" Text="Gender : &lt;br&gt;"></asp:Label>
                                 </td>
-                                <td>
-                                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" Width="108px">
+                                <td class="auto-style36">
+                                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" Width="108px" CssClass="auto-style35">
                                          <asp:ListItem>Male</asp:ListItem>
                                          <asp:ListItem>Female</asp:ListItem>
                                      </asp:RadioButtonList>
                                 </td>
+                                <td class="auto-style27">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="auto-style17" colspan="2">
+                                <td class="auto-style17" colspan="3">
                                     <select id="Select1" class="auto-style18" name="D1">
                                         <option value="0">Select Your Region</option>
                                         <option value="1">Egypt</option>
@@ -424,17 +492,17 @@
                                     </select></td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="2">
-                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign Up" Width="119px" Height="42px" PostBackUrl="~/Home.aspx" />
+                                <td class="auto-style6" colspan="3">
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" ValidationGroup='valGroup1' Text="Sign Up" Width="119px" Height="42px" PostBackUrl="~/Home.aspx" />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="2">
+                                <td class="auto-style6" colspan="3">
                                     <asp:Label ID="Label4" runat="server" Text="____________________________________________________" CssClass="auto-style10"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="2">
+                                <td class="auto-style6" colspan="3">
                                     <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/SignIn.aspx">Already have an account?</asp:LinkButton>
                                 </td>
                             </tr>

@@ -72,6 +72,9 @@
         .auto-style4 {
             height: 56px;
         }
+        .auto-style5 {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +91,7 @@
             <tr>
                 <td colspan="4" id="TDS" class="auto-style4">
                     <asp:HyperLink ID="HyperLink3" runat="server">Home</asp:HyperLink>
-                    <asp:HyperLink ID="HyperLink4" runat="server">Your History</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style5" NavigateUrl="~/Voter.aspx">Your Account</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink5" runat="server">About</asp:HyperLink>
                     <asp:HyperLink ID="HyperLink6" runat="server">Support</asp:HyperLink>
                 </td>
