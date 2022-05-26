@@ -59,7 +59,7 @@
              margin-left:180px;
              margin-top:20px;
         }
-        #Password1 {
+        #pw {
              width: 10cm;
             padding: 6px 15px 7px 0px;
             margin-left:40px;
@@ -73,7 +73,7 @@
             background-color: transparent;
             border-radius: 10px 10px 10px 10px;
         }
-        #Text1 {
+        #fn{
             width: 10cm;
             padding: 6px 15px 7px 0px;
             margin-top:20px;
@@ -194,7 +194,7 @@
             font-size: 16px;
         }
        
-       #Select1
+       #dd1
        {
             width: 10cm;
             /padding: 6px 15px 7px 0px;
@@ -242,7 +242,7 @@
             height: 33px;
             width: 344px;
         }
-        #Text2 {
+        #sn{
             width: 10cm;
             padding: 6px 15px 7px 0px;
             margin-top:20px;
@@ -259,7 +259,7 @@
 
         }
 
-        #Text3 {
+        #em{
             width: 10cm;
             padding: 6px 15px 7px 0px;
             margin-top:20px;
@@ -276,7 +276,7 @@
 
         }
 
-        #Password1 {
+        #pw {
             width: 10cm;
             padding: 6px 15px 7px 0px;
             margin-top:20px;
@@ -309,7 +309,7 @@
             background-color: transparent;
             border-radius: 10px 10px 10px 10px;
         }
-        #BDate{
+        #bd{
              width: 8.5cm;
             padding: 6px 15px 7px 0px;
           
