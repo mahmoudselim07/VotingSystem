@@ -355,13 +355,6 @@
             font-size: 12px;
         }
 
-        .auto-style25 {
-            width: 7.6cm;
-            height: 18px;
-            margin-right:30px;
-            justify-content:center;
-            align-items: center;
-        }
         .auto-style26 {
             height: 10px;
         }
@@ -403,6 +396,23 @@
             width: 83px;
         }
 
+                               
+
+        #Password3 {
+             width: 10cm;
+            padding: 6px 15px 7px 0px;
+            margin-left:40px;
+            margin-bottom:20px;
+            border-left-color :rgb(186, 186, 186);
+            border-right-color :rgb(186, 186, 186);
+            border-top-color:rgb(186, 186, 186);
+            border-bottom-color:rgb(186, 186, 186);
+            border-style:ridge;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 10px 10px 10px 10px;
+        }
+        
         </style>
     </head>
 <body style="height: 781px; width: 1273px;">
@@ -416,93 +426,102 @@
                     <td class="auto-style2">
                         <table class="auto-style4">
                             <tr>
-                                <td colspan="3">
+                                <td colspan="4">
                                     <asp:Label ID="Label1" runat="server" Text="Sign Up" CssClass="auto-style10"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style21">
-                                    <asp:TextBox placeholder=" First Name" id="Text1" type="text" class="auto-style11" runat="server"></asp:TextBox>
+                                    <asp:TextBox placeholder=" First Name" id="fn" type="text" class="auto-style11" runat="server"></asp:TextBox>
                                 </td>
-                                <td class="auto-style28" colspan="2">
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="Text1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <td class="auto-style28" colspan="3">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="fn" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="auto-style20">
-                                    <asp:TextBox placeholder=" Second Name" id="Text2" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
-                                <td class="auto-style29" colspan="2">
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="Text2" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:TextBox placeholder=" Second Name" id="sn" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
+                                <td class="auto-style29" colspan="3">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="sn" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                             </tr>
                             <tr>
                                 <td class="auto-style19">
-                                    <asp:TextBox placeholder=" E-Mail" id="Text3" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
-                                <td class="auto-style30" colspan="2">
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup='valGroup1' ControlToValidate="Text3" ErrorMessage="Write your valid email&lt;br&gt;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Text3" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:TextBox placeholder=" E-Mail" id="em" type="text" class="auto-style11" runat="server"></asp:TextBox></td>
+                                <td class="auto-style30" colspan="3">
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup='valGroup1' ControlToValidate="em" ErrorMessage="Write your valid email&lt;br&gt;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="em" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                             </tr>
                             <tr>
                                 <td class="auto-style32">
-                                     <asp:TextBox placeholder=" Password" id="Password1" type="password" runat="server"></asp:TextBox></td>
-                                <td class="auto-style33" colspan="2">
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup='valGroup1' ControlToValidate="Password1" ErrorMessage="Must be morethan 8 characters with numbers and lower case and upper case and special character" ValidationExpression="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%?=*&]).{8,20})" ForeColor="Red"></asp:RegularExpressionValidator>
+                                     <asp:TextBox placeholder=" Password" id="pw" type="password" runat="server"></asp:TextBox></td>
+                                <td class="auto-style33" colspan="3">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup='valGroup1' ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="pw" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup='valGroup1' ControlToValidate="pw" ErrorMessage="Must be morethan 8 characters with numbers and lower case and upper case and special character" ValidationExpression="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%?=*&]).{8,20})" ForeColor="Red"></asp:RegularExpressionValidator>
                                     </td>
                             </tr>
                             <tr>
                                 <td class="auto-style22">
                                       <asp:TextBox placeholder=" Confirm Password" id="Password2" type="password" runat="server"></asp:TextBox></td>
-                                <td class="auto-style31" colspan="2">
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup='valGroup1' runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="Password1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <td class="auto-style31" colspan="3">
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup='valGroup1' runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ControlToValidate="pw" ForeColor="Red"></asp:RequiredFieldValidator>
                                     </td>
                             </tr>
                             <tr>
                                 <td class="auto-style34">
                                      <asp:Label ID="Label7" runat="server" Text="Birth Date : &lt;br&gt;"></asp:Label>
                                 </td>
-                                <td class="auto-style26" colspan="2">
-                                    <input placeholder=" Bithday" id="BDate" type="date" class="auto-style25" /></td>
+                                <td class="auto-style26" colspan="3">
+                                      <asp:TextBox placeholder=" Confirm Password" id="bd" type="Date" runat="server"></asp:TextBox></td>
                                      &nbsp;</td>
                             </tr>
                             <tr>
                                 <td class="auto-style27">
                                      <asp:Label ID="Label6" runat="server" Text="Gender : &lt;br&gt;"></asp:Label>
                                 </td>
-                                <td class="auto-style36">
-                                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" Width="108px" CssClass="auto-style35">
+                                <td class="auto-style36" colspan="2">
+                                     <asp:RadioButtonList ID="rb1" runat="server" Width="108px" CssClass="auto-style35">
                                          <asp:ListItem>Male</asp:ListItem>
                                          <asp:ListItem>Female</asp:ListItem>
                                      </asp:RadioButtonList>
                                 </td>
                                 <td class="auto-style27">
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Must not be empty&lt;br&gt;" ValidationGroup='valGroup1' ControlToValidate="rb1" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style17" colspan="3">
-                                    <select id="Select1" class="auto-style18" name="D1">
-                                        <option value="0">Select Your Region</option>
-                                        <option value="1">Egypt</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">Geramny</option>
-                                        <option value="4">France</option>
-                                        <option value="5">USA</option>
-                                    </select></td>
+                                <td class="auto-style17" colspan="4">
+                                    <asp:DropDownList ID="dd1"  class="auto-style18" runat="server">
+                                        <asp:ListItem>Egypt</asp:ListItem>
+                                        <asp:ListItem>Germany</asp:ListItem>
+                                        <asp:ListItem>France</asp:ListItem>
+                                        <asp:ListItem>UK</asp:ListItem>
+                                        <asp:ListItem>USA</asp:ListItem>
+                                        <asp:ListItem>UAE</asp:ListItem>
+                                        <asp:ListItem>Lebanon</asp:ListItem>
+                                        <asp:ListItem>Palestine</asp:ListItem>
+                                        <asp:ListItem>Iraq</asp:ListItem>
+                                        <asp:ListItem>Russia</asp:ListItem>
+
+                                    </asp:DropDownList>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="3">
+                                <td class="auto-style6" colspan="2">
                                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" ValidationGroup='valGroup1' Text="Sign Up" Width="119px" Height="42px" PostBackUrl="~/Home.aspx" />
                                 </td>
+                                <td class="auto-style6" colspan="2">
+                                    <asp:Label ID="LD" runat="server"></asp:Label>
+                                </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="3">
+                                <td class="auto-style6" colspan="4">
                                     <asp:Label ID="Label4" runat="server" Text="____________________________________________________" CssClass="auto-style10"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="auto-style6" colspan="3">
+                                <td class="auto-style6" colspan="4">
                                     <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/SignIn.aspx">Already have an account?</asp:LinkButton>
                                 </td>
                             </tr>
